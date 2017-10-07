@@ -51,3 +51,23 @@ module: {
 } //module
 
 now we can use const of es2015
+
+
+--------------------
+css loaders
+use to load in only style need in app
+dynamically inject content and split into different component and each component needs different css.
+css becomes much more modular and easier to manage.
+css-loader ,loads the CSS into our js file
+style-loader adds our css into DOM.
+in html
+<div class="into-component"><h1>css loaders</h1></div>
+
+in js
+require('./css/introComponent.css');
+
+in webpack.config.js
+{
+    test: /\.css$/,
+    loader: 'style-loader!css-loader'
+}

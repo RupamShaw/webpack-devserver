@@ -9,20 +9,28 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-
-
      module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015']
-                }
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                      presets: ['es2015']
+                    }
+                  }
+
+            },
+            {
+              test    : /\.css$/,
+              use     : [
+                "style-loader",
+                "css-loader"
+              ]
             }
         ] //loaders
-    } //module
+    }
 
 
 };

@@ -1,2 +1,2 @@
 const msg  = "hi from web";
-module.exports ;
+module.exports  = msg ;
