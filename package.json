@@ -1,0 +1,19 @@
+{
+  "name": "webdevserver",
+  "version": "1.0.0",
+  "description": "simple html with css scss on web devserver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RupamShaw/webpack-devserver.git"
+  },
+  "author": "rupam <rupam.shaw@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/RupamShaw/webpack-devserver/issues"
+  },
+  "homepage": "https://github.com/RupamShaw/webpack-devserver#readme"
+}
