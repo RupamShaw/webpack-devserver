@@ -67,7 +67,25 @@ in js
 require('./css/introComponent.css');
 
 in webpack.config.js
-{
-    test: /\.css$/,
-    loader: 'style-loader!css-loader'
+module: {
+   rules: [
+       {
+           test: /\.js$/,
+           exclude: /(node_modules)/,
+           use: {
+               loader: 'babel-loader',
+               options: {
+                 presets: ['es2015']
+               }
+             }
+
+       },
+       {
+         test    : /\.css$/,
+         use     : [
+           "style-loader",
+           "css-loader"
+         ]
+       }
+   ] //loaders
 }
