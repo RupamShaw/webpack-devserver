@@ -1,1 +1,2 @@
-module.exports = "hi from web";
+const msg  = "hi from web";
+module.exports ;

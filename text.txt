@@ -6,7 +6,10 @@ add js and link with html it works too.
 
 for js to require another js make bundle.js by> webpack script-1.js ./bundle.js .
 module.exports in one js and in script-1.js var msg = require(./script-2)
--------- webpackconfig
+---------------------1 to run webpack by package.json  so do npm run start----
+https://www.youtube.com/watch?v=TaWKUpahFZM in this at 2.22 it says in package.json scripts { "start": "webpack ./src/script-1.js ./dist/bundle.js" }
+-------------------------
+--------2 to run by  webpack.config.js-  do  > webpack in command line
 with webpack.config file we dont need to write " webpack script-1.js ./bundle.js" to run
 only script command is enough
  -delete bundle.js and folder and bundle created auto dist/bundle.js when run webpack
@@ -14,7 +17,7 @@ only script command is enough
 
 const path = require('path');
 module.exports = {
-  entry: './path/to/my/entry/file.js',
+  entry: './src/script-1.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'my-first-webpack.bundle.js'
@@ -22,3 +25,29 @@ module.exports = {
 };
 
 <script src="./dist/bundle.js"></script>
+
+
+--------------babel loaders
+https://www.youtube.com/watch?v=H_QACBSqRBE&list=PL4cUxeGkcC9iTQ3J5oa6orDIMQKKxl8dC&index=4  Webpack Tutorial for Beginners #4 - Babel Loaders
+webpack loaders perform tranformations on our code
+babel-loaders can be used to transform ES6 or ES2015 code (and JSX) into vanilla JavaScript.
+
+how to tranform --install babel-core babel-loader and install any presets to perform transformations(eg for es2015 tranform install es22015preset and for jsx its preset) and
+configure webpack.config to use babel
+eg es2015 have const msg ="hi" ; module.exports = msg; //we have to use babel in webpack to transform to var in bundle.js
+
+module: {
+   loaders: [
+       {
+           test: /\.js$/,  ////js file test only js not others like html readme etc extensions regular expression
+           exclude: /(node_modules)/, //this not to test with loader
+           loader: 'babel-loader',
+           query: {
+               presets: ['es2015']
+           }
+       }
+
+   ] //loaders
+} //module
+
+now we can use const of es2015
