@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=ytRnPV0kRN0&list=PL4cUxeGkcC9iTQ3J5oa6orDIMQKKxl8dC
+
+settings/install atom-live-server from packages and keybindings to start server by ctrl+alt+3
+install webpack devserver by this changes in html directly render in browser.
+add js and link with html it works too.
+
+for js to require another js make bundle.js by> webpack script-1.js ./bundle.js .
+module.exports in one js and in script-1.js var msg = require(./script-2)

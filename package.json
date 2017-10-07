@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RupamShaw/webpack-devserver/issues"
   },
-  "homepage": "https://github.com/RupamShaw/webpack-devserver#readme"
+  "homepage": "https://github.com/RupamShaw/webpack-devserver#readme",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
 }
