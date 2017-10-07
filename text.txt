@@ -89,3 +89,39 @@ module: {
        }
    ] //loaders
 }
+
+
+--------------------
+scss loaders are node-sass and sass-loader
+https://www.youtube.com/watch?v=gAJuZtvXvpk&list=PL4cUxeGkcC9iTQ3J5oa6orDIMQKKxl8dC&index=6
+
+in html
+<div class="into-components"><h1>scss loaders</h1></div>
+
+in js
+require('./css/introComponent.scss');
+
+in webpack.config.js
+module: {
+   rules: [
+       {
+           test: /\.js$/,
+           exclude: /(node_modules)/,
+           use: {
+               loader: 'babel-loader',
+               options: {
+                 presets: ['es2015']
+               }
+             }
+
+       },
+       {
+         test    : /\.scss$|.css$/,
+         use     : [
+           "style-loader",
+           "css-loader",
+           "sass-loader"
+         ]
+       }
+   ] //loaders
+}
