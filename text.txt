@@ -125,3 +125,19 @@ module: {
        }
    ] //loaders
 }
+
+-------------------------
+webpack devserver by  npm start 
+=======
+https://www.youtube.com/watch?v=TaWKUpahFZM
+4:30- 5:15
+inbuilt devserver
+change in package.json     "start":"webpack-dev-server --config webpack.config.js",
+>npm i webpack-dev-server --save-dev
+https://www.youtube.com/watch?v=soI7X-7OSb4 Webpack 2 with Webpack Dev Server Configuration
+https://www.youtube.com/watch?v=xn0rlcDq99U Webpack Config Basics 6. Webpack Dev Server
+devServer: {
+  contentBase: path.join(__dirname, "dist"),
+  compress: true,
+  port: 9000
+}
