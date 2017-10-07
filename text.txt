@@ -6,3 +6,19 @@ add js and link with html it works too.
 
 for js to require another js make bundle.js by> webpack script-1.js ./bundle.js .
 module.exports in one js and in script-1.js var msg = require(./script-2)
+-------- webpackconfig
+with webpack.config file we dont need to write " webpack script-1.js ./bundle.js" to run
+only script command is enough
+ -delete bundle.js and folder and bundle created auto dist/bundle.js when run webpack
+ -and made src folder for js
+
+const path = require('path');
+module.exports = {
+  entry: './path/to/my/entry/file.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'my-first-webpack.bundle.js'
+  }
+};
+
+<script src="./dist/bundle.js"></script>
