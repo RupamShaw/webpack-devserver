@@ -1,12 +1,12 @@
 const path = require('path');
 module.exports = {
-
+    devtool: 'source-map',
     //define entry point
     entry: './src/script-1.js',
 
-    //defin output point
+    //define output point
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
   
@@ -30,9 +30,19 @@ module.exports = {
                 "css-loader",
                 "sass-loader"
               ]
+            },
+            {
+                test: /\.(?:png|jpg|svg)$/,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true
+                        }
+                    }
+                ]
             }
         ] //loaders
     }
-
-
-};
+}

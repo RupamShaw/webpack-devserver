@@ -1,10 +1,10 @@
-$mainColor: #7777bb;
+$mainColor: #B80909;
 .intro-components{
     padding: 20px;
     background: $mainColor;
     color: #fff;
-    font-family: arial;
+    font-family: Courier New, Courier, monospace;
     h1{
-      text-transform: uppercase;
+      text-transform: lowercase;
     }
 }

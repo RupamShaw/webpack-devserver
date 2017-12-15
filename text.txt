@@ -1,3 +1,10 @@
+we can add existing css like bootstrap by adding in html script
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+
+
+
 https://www.youtube.com/watch?v=ytRnPV0kRN0&list=PL4cUxeGkcC9iTQ3J5oa6orDIMQKKxl8dC
 
 settings/install atom-live-server from packages and keybindings to start server by ctrl+alt+3
@@ -127,7 +134,7 @@ module: {
 }
 
 -------------------------
-webpack devserver by  npm start 
+webpack devserver by  npm start
 =======
 https://www.youtube.com/watch?v=TaWKUpahFZM
 4:30- 5:15
